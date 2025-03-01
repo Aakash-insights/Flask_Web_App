@@ -1,0 +1,9 @@
+flask_notes_env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+instance/
+.env
+.DS_Store
+.vscode/

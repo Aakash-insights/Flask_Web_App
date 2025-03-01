@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+</head>
+<body>
+    <h1>Admin Details</h1>
+    <p><strong>Name:</strong> {{ admin.name }}</p>
+    <p><strong>Email:</strong> {{ admin.email }}</p>
+
+    <h2>Notes</h2>
+    <form action="/add_note" method="post">
+        <textarea name="note" rows="4" cols="50" placeholder="Enter your note here"></textarea><br>
+        <button type="submit">Add Note</button>
+    </form>
+
+    <h3>Saved Notes</h3>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note.content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
